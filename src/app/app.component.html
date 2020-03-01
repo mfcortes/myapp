@@ -1,4 +1,47 @@
+
 <div class="container">
-  <h1>Mi Aplicacion</h1>
-  {{title}}
+  <div class="h">
+    <img [src]=srcImagen alt="Imagen">
+  </div>
+
+  <div class="title"><p>{{title}}</p></div>
+
+  <div  class="but" [style.background-color]="color" >
+    <div>
+      <button (click)='changeTitle("Lo Cambie")'
+        *ngIf="title==rspTitle"
+      >
+        Cambia Titulo
+      </button>
+
+      <button (click)="recuperaTitle()"
+        *ngIf="title!=rspTitle"
+      >
+        Volver Titulo Original
+      </button>
+    </div>
+
+    <div>
+      <button (click)="generaColorRnd()">Cambiar color</button>
+    </div>
+    <div>
+       <button (click)="actializaFoto()">Estas de Suerte</button>
+    </div>
+  </div>
+
+  <div class="dvLista">
+      <ul>
+         <li *ngFor="let item of listaaComandos">
+            {{item}}
+         </li>
+      </ul>
+
+      <input type="text" placeholder="Tarea" [(ngModel)]="nvaTarea" (keydown.enter)="insertarTarea()">
+      <button (click)="insertarTarea()" >Agregar Tarea</button>
+      <h2>{{nvaTarea}}</h2>
+  </div>
+
 </div>
+
+
+

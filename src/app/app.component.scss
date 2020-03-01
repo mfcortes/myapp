@@ -1,0 +1,37 @@
+
+.h {
+  grid-area: h;
+  background-color: #f45050;
+}
+
+.title {
+  grid-area: p;
+  background-color: #c96e6e;
+}
+
+.but {
+  grid-area: b;
+
+}
+
+.dvLista {
+  grid-area: dl;
+  background-color:  #dababa;
+}
+
+.container{
+
+  text-align: center;
+  display: grid;
+  grid-template-columns: 200px 200px;
+  grid-template-rows: 3fr 1fr 2fr;
+  grid-template-areas:
+        "h dl"
+        "p dl"
+        "b dl"
+    ;
+}
+
+li {
+  text-align: left;
+}
