@@ -33,3 +33,15 @@ Se esta haciendo uso del servicio de GitHub https://api.github.com/users/<USER>
 por medio de la libreria de angular HttpClient
 
 
+## Servicios de JSON placeholder
+
+Se uso Servicios de JSON Placeholder https://jsonplaceholder.typicode.com/todos 
+y se utilisaron los metodos RESP de GET PUT POST DELETE UPDATE
+
+
+## Suvir proyecto a GitHUb
+
+git remote add origin https://github.com/mfcortes/maquetacionCSS.git
+git push -u origin master
+
+
