@@ -1,20 +1,19 @@
 
+<h2> {{dataService.VarTitulo}}</h2>
 <div class="container">
-   <div class="allTaks">
-      <button (click)="getAllTask()">Trae Todos Servicios</button>
-   <div class="Taks">
-      <button (click)="getTask()">Trae  un Servicio</button>
+   <div class="botonSelector">
+      <button mat-raised-button color="primary" (click)="getAllTask()">Trae Todos Servicios</button>
    </div>
-
-   <div class="createTaks">
-      <button (click)="createTask()">Insertar Servicio</button>
+   <div class="botonSelector">
+      <button mat-raised-button color="primary" (click)="getTask()">Trae 1 Servicio</button>
    </div>
-
-   <div class="updateTask">
-      <button (click)="updateTask()">Update Servicio</button>
+   <div class="botonSelector">
+      <button mat-raised-button color="primary" (click)="createTask()">Insertar Servicio</button>
    </div>
-
-   <div class="deletTask">
-      <button (click)="deleteTask()">Delete Servicio</button>
+   <div class="botonSelector">
+      <button mat-raised-button color="primary" (click)="updateTask()">Update Servicio</button>
+   </div>
+   <div class="botonSelector">
+      <button mat-raised-button color="primary" (click)="deleteTask()">Delete Servicio</button>
    </div>
 </div>

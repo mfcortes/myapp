@@ -43,5 +43,3 @@ y se utilisaron los metodos RESP de GET PUT POST DELETE UPDATE
 
 git remote add origin https://github.com/mfcortes/maquetacionCSS.git
 git push -u origin master
-
-

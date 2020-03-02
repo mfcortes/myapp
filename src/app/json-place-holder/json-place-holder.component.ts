@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { TaskService } from '../servicios/task.service';
+import { MatButtonModule } from '@angular/material/button';
+import { DataService } from '../servicios/data.service';
 
 @Component({
   selector: 'app-json-place-holder',
@@ -8,24 +10,26 @@ import { TaskService } from '../servicios/task.service';
 })
 export class JsonPlaceHolderComponent implements OnInit {
 
-  constructor(private taskService: TaskService) { }
+  constructor(  private taskService: TaskService
+              , private dataService: DataService
+    ) { }
 
   ngOnInit() {
   }
 
-  getAllTask(){
+  getAllTask() {
     this.taskService.getAllTask().subscribe( tasks => {
       console.log(tasks);
     });
   }
 
-  getTask(){
+  getTask() {
     this.taskService.getTask('2').subscribe( task => {
       console.log(task);
     });
   }
 
-  createTask(){
+  createTask() {
       const task = {
         userId: '9999',
         title: 'change title',
@@ -37,8 +41,7 @@ export class JsonPlaceHolderComponent implements OnInit {
       });
   }
 
-  updateTask()
-  {
+  updateTask() {
     const task = {
       id: '200',
       userId: '88',
@@ -50,12 +53,11 @@ export class JsonPlaceHolderComponent implements OnInit {
     });
   }
 
-  deleteTask()
-  {
-      const id='200';
+  deleteTask() {
+      const id = '200';
       this.taskService.deleteTask(id).subscribe ( deleteTask => {
         console.log(deleteTask);
-      })
+      });
   }
 
 }

@@ -10,12 +10,13 @@ import { ElementoDosComponent } from './elemento-dos/elemento-dos.component';
 
 import { HttpClientModule } from '@angular/common/http';
 
+
 /*Servicios*/
 import { GetGitUserServices } from './servicios/GetGitUserService';
 import { TaskService } from './servicios/task.service';
 import { JsonPlaceHolderComponent } from './json-place-holder/json-place-holder.component';
 
-
+import { MaterialModule } from './shared/material.module';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,8 @@ import { JsonPlaceHolderComponent } from './json-place-holder/json-place-holder.
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MaterialModule
   ],
   providers: [GetGitUserServices,
               TaskService],
