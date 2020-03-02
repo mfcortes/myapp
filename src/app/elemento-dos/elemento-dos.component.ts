@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { getGitUserServices } from '../getGitUserService';
+import { GetGitUserServices } from '../servicios/GetGitUserService';
 import { Subscriber } from 'rxjs';
 
 @Component({
@@ -11,14 +11,14 @@ export class ElementoDosComponent implements OnInit {
 
   public respuestaGit: any;
 
-  constructor(public srvGit: getGitUserServices) {
+  constructor(public getGitUserServices: GetGitUserServices) {
 
    }
 
   ngOnInit() {
     const strUrl = 'https://api.github.com/users/mfcortes';
 
-    this.srvGit
+    this.getGitUserServices
           .getData(strUrl)
           .subscribe( ( res: any) => {
              this.respuestaGit = res;

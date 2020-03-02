@@ -4,7 +4,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class getGitUserServices {
+export class GetGitUserServices {
   constructor(public http: HttpClient) {
       console.log('Servicio esta funcionando');
    }
